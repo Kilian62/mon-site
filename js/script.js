@@ -48,13 +48,13 @@ class maNavbar extends HTMLElement{
         <nav>
         <ul>
             <li>
+                <a href="${root}index.html">Accueil</a>
+            </li>
+            <li>
                 <a href="${root}pages/mes-projets.html">Mes Projets</a>
             </li>
             <li>
                 <a>Moi</a>
-            </li>
-            <li>
-                <a href="${root}index.html">Accueil</a>
             </li>
         </ul>
     </nav>
