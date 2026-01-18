@@ -1,5 +1,11 @@
 class maNavbar extends HTMLElement{
     connectedCallback(){
+
+        const isGitHub = window.location.hostname.includes("github.io");
+        const repoName = "mon-site";
+
+        const root = isGitHub ? `/${repoName}/` : "/";
+
         this.innerHTML =
         `
         <style>
@@ -42,17 +48,17 @@ class maNavbar extends HTMLElement{
         <nav>
         <ul>
             <li>
-                <a href="/pages/mes-projets.html">Mes Projets</a>
+                <a href="${root}pages/mes-projets.html">Mes Projets</a>
             </li>
             <li>
                 <a>Moi</a>
             </li>
             <li>
-                <a href="/index.html">Accueil</a>
+                <a href="${root}index.html">Accueil</a>
             </li>
         </ul>
     </nav>
         `;
     }
 }
-customElements.define('ma-navbar', maNavbar);
+customElements.define('ma-navbar', maNavbar);5
